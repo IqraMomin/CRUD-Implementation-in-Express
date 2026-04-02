@@ -13,6 +13,10 @@ app.use("/",homeRouter);
 app.use("/",studentsRouter);
 app.use("/",coursesRouter);
 
+app.use((req,res)=>{
+    res.send("Page not found");
+})
+
 app.listen(port,()=>{
     console.log(`Server is Up and Running on port${port}`);
 })
